@@ -4,36 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>За нас | Пекарни Желеви</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-color: #d4a373; --secondary-color: #8b5a2b; --dark-color: #2b1e16; --light-color: #faf4ee; --white: #ffffff; --transition: all 0.3s ease; }
+        :root {
+            --bg-dark: #121212; --surface-dark: #1e1e1e;
+            --gold-light: #f5d78d; --gold-main: #d4af37; --gold-dark: #aa8c2c;
+            --text-light: #fdfbf7; --text-muted: #a0a0a0;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--light-color); color: var(--dark-color); line-height: 1.8; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.8; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); padding: 20px 0; text-align: center; z-index: 1000; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
-        nav a { margin: 0 20px; text-decoration: none; color: var(--dark-color); font-weight: 600; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
-        nav a:hover { color: var(--primary-color); }
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 20px 0; text-align: center; z-index: 1000;
+            background: rgba(18, 18, 18, 0.85); backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        nav a {
+            margin: 0 20px; text-decoration: none; color: var(--text-light); font-weight: 600; 
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; transition: 0.3s;
+        }
+        nav a:hover { color: var(--gold-main); }
 
         .page-header {
-            height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            background: linear-gradient(rgba(43, 30, 22, 0.8), rgba(43, 30, 22, 0.8)), url('https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: var(--white); margin-top: 60px;
+            height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(to bottom, rgba(18,18,18,0.5), var(--bg-dark)), 
+                        url('https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            margin-top: 60px;
         }
-        .page-header h1 { font-size: 3.5em; margin-bottom: 10px; }
+        .page-header h1 {
+            font-size: 4em;
+            background: linear-gradient(to right, var(--gold-light), var(--gold-main));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
 
-        .content {
-            max-width: 800px; margin: 60px auto; padding: 40px; background: var(--white); 
-            border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center;
+        .content-box {
+            max-width: 850px; margin: 80px auto; padding: 50px; background: var(--surface-dark); 
+            border-radius: 20px; box-shadow: 20px 20px 40px rgba(0,0,0,0.9);
+            border: 1px solid rgba(212, 175, 55, 0.15); text-align: center;
         }
-        .content h2 { color: var(--secondary-color); font-size: 2.5em; margin-bottom: 20px; }
-        .content p { font-size: 1.1em; margin-bottom: 20px; color: #555; }
-        
-        footer { background-color: var(--dark-color); color: var(--light-color); text-align: center; padding: 40px 20px; margin-top: 50px;}
+        .content-box h2 { color: var(--gold-main); font-size: 2.5em; margin-bottom: 25px; }
+        .content-box p { font-size: 1.1em; color: var(--text-muted); margin-bottom: 20px; }
+
+        footer { background: var(--surface-dark); border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 20px; text-align: center; color: var(--text-muted); }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html">Начало</a>
         <a href="menu.html">Меню</a>
@@ -43,19 +60,18 @@
 
     <header class="page-header">
         <h1>Нашата История</h1>
-        <p>Традиция, която се предава от поколение на поколение.</p>
+        <p style="color: var(--text-muted);">Традиция, предаваща се от поколение на поколение.</p>
     </header>
 
-    <section class="content">
-        <h2>Майсторство и Любов</h2>
-        <p>Всичко започна с една проста идея – да върнем вкуса на истинския хляб на трапезата. В "Пекарни Желеви" не правим компромиси с качеството. Използваме само чисто брашно, вода, сол и време.</p>
-        <p>Вярваме, че добрата храна събира хората. Затова всяка сутрин нашите майстори пекари в Сливен замесват тестото с грижа и внимание, за да ви предложим продукти, на които можете да се доверите.</p>
-        <p>Благодарим ви, че сте част от нашето голямо семейство!</p>
-    </section>
+    <div class="content-box">
+        <h2>Майсторство и Страст</h2>
+        <p>Всичко започна с една проста идея – да върнем вкуса на истинския хляб на семейната трапеза в Сливен. В "Пекарни Желеви" отказваме да правим компромиси с качеството.</p>
+        <p>Използваме само чисти съставки: подбрани брашна, вода, сол и най-важното – време за естествена ферментация.</p>
+        <p>Благодарим на хилядите клиенти, които ни се довериха и правят деня ни смислен всяка сутрин!</p>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Пекарни Желеви. Изработено с внимание към детайла.</p>
+        <p>&copy; 2026 Пекарни Желеви. Всички права запазени.</p>
     </footer>
-
 </body>
 </html>
