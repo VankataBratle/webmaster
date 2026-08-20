@@ -5,22 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Меню | Пекарни Желеви</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-dark: #121212; --surface-dark: #1e1e1e;
-            --gold-light: #f5d78d; --gold-main: #d4af37; --gold-dark: #aa8c2c;
-            --text-light: #fdfbf7; --text-muted: #a0a0a0;
+            --bg-dark: #121212;
+            --surface-dark: #1e1e1e;
+            --gold-light: #f5d78d;
+            --gold-main: #d4af37;
+            --gold-dark: #aa8c2c;
+            --text-light: #fdfbf7;
+            --text-muted: #a0a0a0;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
 
         nav {
-            position: fixed; top: 0; width: 100%; padding: 20px 0; text-align: center; z-index: 1000;
-            background: rgba(18, 18, 18, 0.85); backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.85);
+            backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
+
         nav a {
             margin: 0 20px;
             text-decoration: none;
@@ -31,7 +57,10 @@
             font-size: 0.9em;
             transition: 0.3s;
         }
-        nav a:hover { color: var(--gold-main); }
+
+        nav a:hover {
+            color: var(--gold-main);
+        }
 
         .page-header {
             height: 45vh;
@@ -40,16 +69,23 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+
             background:
                 linear-gradient(to bottom, rgba(18,18,18,0.5), var(--bg-dark)),
                 url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1920&q=80')
                 center/cover;
+
             margin-top: 60px;
         }
 
         .page-header h1 {
             font-size: 4em;
-            background: linear-gradient(to right, var(--gold-light), var(--gold-main));
+            background: linear-gradient(
+                to right,
+                var(--gold-light),
+                var(--gold-main)
+            );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -138,120 +174,178 @@
 
     <div class="menu-container">
 
+        <!-- ========================= -->
         <!-- ТРАДИЦИОНЕН ХЛЯБ -->
+        <!-- ========================= -->
+
         <h2 class="category-title">Традиционен Хляб</h2>
 
         <div class="grid">
 
-            <!-- Селски хляб с квас -->
+            <!-- СЕЛСКИ ХЛЯБ С КВАС -->
             <div class="card-product">
+
                 <img
                     src="https://image-api.nosalty.hu/nosalty/images/recipes/tn/VS/rusztikus-kovaszos-kenyer.jpeg?fit=crop&s=c6f4562446a113c2367bb18a839d032e&w=3000"
                     alt="Селски хляб с квас"
                 >
 
                 <div class="card-content">
+
                     <h3>Селски хляб с квас</h3>
-                    <p>Бавно ферментирал хляб с хрупкава кора.</p>
+
+                    <p>
+                        Бавно ферментирал хляб с хрупкава кора.
+                    </p>
+
                     <div class="price-container">
                         <span class="price-tag">€1.28</span>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Пълнозърнест хляб -->
+
+            <!-- ПЪЛНОЗЪРНЕСТ ХЛЯБ -->
             <div class="card-product">
+
                 <img
                     src="https://images.pexels.com/photos/10109372/pexels-photo-10109372.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Пълнозърнест хляб"
                 >
 
                 <div class="card-content">
+
                     <h3>Пълнозърнест хляб</h3>
-                    <p>Здравословен избор с микс от печени семена.</p>
+
+                    <p>
+                        Здравословен избор с микс от печени семена.
+                    </p>
+
                     <div class="price-container">
                         <span class="price-tag">€1.12</span>
                     </div>
+
                 </div>
             </div>
 
         </div>
 
 
+        <!-- ========================= -->
         <!-- ТОПЛИ ЗАКУСКИ -->
+        <!-- ========================= -->
+
         <h2 class="category-title">Топли Закуски</h2>
 
         <div class="grid">
 
-            <!-- Домашна баница -->
+            <!-- ДОМАШНА БАНИЦА -->
             <div class="card-product">
+
                 <img
                     src="https://secessionstyle.com/images/banica.jpg"
                     alt="Домашна баница"
                 >
 
                 <div class="card-content">
+
                     <h3>Домашна баница</h3>
-                    <p>Традиционна точена баница със сирене и масло.</p>
+
+                    <p>
+                        Традиционна точена баница със сирене и масло.
+                    </p>
+
                     <div class="price-container">
                         <span class="price-tag">€1.43</span>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Маслени кроасани -->
+
+            <!-- МАСЛЕНИ КРОАСАНИ -->
             <div class="card-product">
+
                 <img
                     src="https://images.pexels.com/photos/6537669/pexels-photo-6537669.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Маслени кроасани"
                 >
 
                 <div class="card-content">
+
                     <h3>Маслени кроасани</h3>
-                    <p>Нежни френски кроасани с истинско масло.</p>
+
+                    <p>
+                        Нежни френски кроасани с истинско масло.
+                    </p>
+
                     <div class="price-container">
                         <span class="price-tag">€1.02</span>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Пухкави мекици -->
+
+            <!-- ПУХКАВИ МЕКИЦИ -->
             <div class="card-product">
+
                 <img
                     src="https://www.bgonair.bg/media/files/resized/article/w1280x720/412/54d45119bebd1ad1b9b1ecf462290412-mekici.jpeg"
                     alt="Пухкави мекици"
                 >
 
                 <div class="card-content">
+
                     <h3>Пухкави мекици</h3>
-                    <p>Класически мекици по семейна рецепта.</p>
+
+                    <p>
+                        Класически мекици по семейна рецепта.
+                    </p>
+
                     <div class="price-container">
                         <span class="price-tag">€1.23</span>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Сладки кифли с мармалад -->
+
+            <!-- СЛАДКИ КИФЛИ С МАРМАЛАД -->
             <div class="card-product">
+
                 <img
-                    src="https://media.lasi.lv/media/cache/gallery__jpeg/uploads/media/image/2025092611475668d6533c7afbf.jpg"
+                    src="https://images.unsplash.com/photo-1555507036-ab1c6a4c0b8a?auto=format&fit=crop&w=600&q=80"
                     alt="Сладки кифли с мармалад"
                 >
 
                 <div class="card-content">
+
                     <h3>Сладки кифли с мармалад</h3>
-                    <p>Меки кифлички, пълни с ароматен мармалад.</p>
+
+                    <p>
+                        Меки кифлички, пълни с ароматен мармалад.
+                    </p>
+
                     <div class="price-container">
                         <span class="price-tag">€0.92</span>
                     </div>
+
                 </div>
             </div>
 
         </div>
+
     </div>
 
+
+    <!-- FOOTER -->
+
     <footer>
-        <p>&copy; 2026 Пекарни Желеви. Всички права запазени.</p>
+        <p>
+            &copy; 2026 Пекарни Желеви. Всички права запазени.
+        </p>
     </footer>
 
 </body>
