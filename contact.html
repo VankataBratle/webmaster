@@ -4,41 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакти | Пекарни Желеви</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-color: #d4a373; --secondary-color: #8b5a2b; --dark-color: #2b1e16; --light-color: #faf4ee; --white: #ffffff; --transition: all 0.3s ease; }
+        :root {
+            --bg-dark: #121212; --surface-dark: #1e1e1e;
+            --gold-light: #f5d78d; --gold-main: #d4af37; --gold-dark: #aa8c2c;
+            --text-light: #fdfbf7; --text-muted: #a0a0a0;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--light-color); color: var(--dark-color); line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); padding: 20px 0; text-align: center; z-index: 1000; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
-        nav a { margin: 0 20px; text-decoration: none; color: var(--dark-color); font-weight: 600; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
-        nav a:hover { color: var(--primary-color); }
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 20px 0; text-align: center; z-index: 1000;
+            background: rgba(18, 18, 18, 0.85); backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        nav a {
+            margin: 0 20px; text-decoration: none; color: var(--text-light); font-weight: 600; 
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; transition: 0.3s;
+        }
+        nav a:hover { color: var(--gold-main); }
 
         .page-header {
-            height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            background: linear-gradient(rgba(43, 30, 22, 0.7), rgba(43, 30, 22, 0.7)), url('https://images.unsplash.com/photo-1555507036-ab1e4006aaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: var(--white); margin-top: 60px;
+            height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(to bottom, rgba(18,18,18,0.5), var(--bg-dark)), 
+                        url('https://images.unsplash.com/photo-1555507036-ab1e4006aaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            margin-top: 60px;
         }
-        .page-header h1 { font-size: 3.5em; margin-bottom: 10px; }
+        .page-header h1 {
+            font-size: 4em;
+            background: linear-gradient(to right, var(--gold-light), var(--gold-main));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
 
-        .locations { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .location-card {
-            background-color: var(--dark-color); color: var(--light-color); padding: 30px; border-radius: 15px; 
-            width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: var(--transition);
-        }
-        .location-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
-        .location-card h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.4em; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;}
+        .locations { display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; padding: 80px 20px 40px 20px; max-width: 1200px; margin: 0 auto; }
         
-        .contact-info { text-align: center; margin-bottom: 60px; }
-        .contact-info p { font-size: 1.2em; }
-        .phone { color: var(--secondary-color); font-weight: bold; font-size: 1.5em; display: block; margin-top: 10px;}
+        .card-location {
+            background: var(--surface-dark); padding: 35px; border-radius: 20px; width: 340px;
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.9); border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+        .card-location:hover {
+            transform: translateY(-12px) rotateX(4deg);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 20px 25px 40px rgba(0,0,0,0.95), 0 0 20px rgba(212,175,55,0.15);
+        }
+        .card-location h3 { color: var(--gold-light); font-size: 1.5em; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .card-location p { color: var(--text-muted); margin-bottom: 8px; }
 
-        footer { background-color: var(--dark-color); color: var(--light-color); text-align: center; padding: 40px 20px; }
+        .contact-banner { text-align: center; padding: 40px 20px 80px 20px; }
+        .phone-number { font-size: 1.8em; font-weight: 700; color: var(--gold-main); display: inline-block; margin-top: 15px; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+
+        footer { background: var(--surface-dark); border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 20px; text-align: center; color: var(--text-muted); }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html">Начало</a>
         <a href="menu.html">Меню</a>
@@ -48,37 +70,34 @@
 
     <header class="page-header">
         <h1>Свържете се с нас</h1>
-        <p>Намерете най-близката пекарна в град Сливен.</p>
+        <p style="color: var(--text-muted);">Посетете ни в нашите обекти в град Сливен.</p>
     </header>
 
-    <section class="locations">
-        <div class="location-card">
+    <div class="locations">
+        <div class="card-location">
             <h3>📍 Обект 1 - Център</h3>
-            <p>бул. "Цар Освободител" №15</p>
-            <p>🕒 Пон-Нед: 06:30 - 19:30 ч.</p>
+            <p><strong>Адрес:</strong> бул. "Цар Освободител" №15</p>
+            <p><strong>Работно време:</strong> Пон - Нед: 06:30 - 19:30 ч.</p>
         </div>
-        
-        <div class="location-card">
+        <div class="card-location">
             <h3>📍 Обект 2 - кв. Българка</h3>
-            <p>ул. "Панайот Хитов" №82</p>
-            <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
+            <p><strong>Адрес:</strong> ул. "Панайот Хитов" №82</p>
+            <p><strong>Работно време:</strong> Пон - Съб: 07:00 - 19:00 ч.</p>
         </div>
-
-        <div class="location-card">
+        <div class="card-location">
             <h3>📍 Обект 3 - Сини камъни</h3>
-            <p>до кооперативния пазар</p>
-            <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
+            <p><strong>Адрес:</strong> до кооперативния пазар</p>
+            <p><strong>Работно време:</strong> Пон - Съб: 07:00 - 19:00 ч.</p>
         </div>
-    </section>
+    </div>
 
-    <div class="contact-info">
-        <p>Имате специален повод? Поръчайте празнична питка или торта.</p>
-        <span class="phone">📞 0888 123 456</span>
+    <div class="contact-banner">
+        <p style="color: var(--text-muted); font-size: 1.2em;">Имате въпроси или искате поръчка за специален повод?</p>
+        <span class="phone-number">📞 0888 123 456</span>
     </div>
 
     <footer>
-        <p>&copy; 2026 Пекарни Желеви. Изработено с внимание към детайла.</p>
+        <p>&copy; 2026 Пекарни Желеви. Всички права запазени.</p>
     </footer>
-
 </body>
 </html>
