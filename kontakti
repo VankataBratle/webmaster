@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пекарни Желеви | Контакти</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #fdf8f5; color: #4a3b32; }
+        header { background-color: #d4a373; padding: 40px 20px; text-align: center; color: white; }
+        header h1 { margin: 0; font-size: 3em; }
+        nav { text-align: center; padding: 15px; background-color: #faedcd; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav a { margin: 0 15px; text-decoration: none; color: #8b5a2b; font-weight: bold; font-size: 1.1em; }
+        nav a:hover { color: #d4a373; }
+        main { padding: 50px 20px; text-align: center; max-width: 1000px; margin: 0 auto; }
+        
+        .locations { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+        .location-card { background-color: #634f43; color: #faedcd; padding: 20px; border-radius: 8px; width: 260px; text-align: left; }
+        .location-card h3 { margin-top: 0; color: white; border-bottom: 1px solid #8b5a2b; padding-bottom: 10px;}
+        
+        .contact-info { margin-top: 40px; font-size: 1.2em; background: white; padding: 20px; border-radius: 8px; display: inline-block;}
+        footer { background-color: #4a3b32; color: #faedcd; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Свържете се с нас</h1>
+        <p>Намерете най-близката пекарна до вас</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html">За нас</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+
+    <main>
+        <h2>Нашите обекти в град Сливен</h2>
+        
+        <div class="locations">
+            <div class="location-card">
+                <h3>📍 Обект 1 - Център</h3>
+                <p>бул. "Цар Освободител" №15</p>
+                <p>🕒 Пон-Нед: 06:30 - 19:30 ч.</p>
+            </div>
+            
+            <div class="location-card">
+                <h3>📍 Обект 2 - кв. Българка</h3>
+                <p>ул. "Панайот Хитов" №82</p>
+                <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
+            </div>
+
+            <div class="location-card">
+                <h3>📍 Обект 3 - Сини камъни</h3>
+                <p>до кооперативния пазар</p>
+                <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <p>📞 <strong>Телефон за поръчки на питки и торти:</strong> 0888 123 456</p>
+            <p>✉️ <strong>Имейл:</strong> office@jelevi-bakery.bg</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Пекарни Желеви Сливен. Всички права запазени.</p>
+    </footer>
+
+</body>
+</html>
