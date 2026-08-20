@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пекарни Желеви | Меню</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #fdf8f5; color: #4a3b32; }
+        header { background-color: #d4a373; padding: 40px 20px; text-align: center; color: white; }
+        header h1 { margin: 0; font-size: 3em; }
+        nav { text-align: center; padding: 15px; background-color: #faedcd; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav a { margin: 0 15px; text-decoration: none; color: #8b5a2b; font-weight: bold; font-size: 1.1em; }
+        nav a:hover { color: #d4a373; }
+        main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+        
+        .menu-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;}
+        .menu-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 280px; border-top: 4px solid #d4a373;}
+        .menu-item h3 { color: #8b5a2b; margin-top: 0; }
+        .price { font-weight: bold; color: #4a3b32; font-size: 1.2em; }
+        
+        footer { background-color: #4a3b32; color: #faedcd; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Нашето Меню</h1>
+        <p>Прясно изпечени всеки ден</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html">За нас</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+
+    <main>
+        <h2 style="text-align: center;">Традиционен Хляб</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>🍞 Селски хляб с квас</h3>
+                <p>Бавно ферментирал, с хрупкава кора.</p>
+                <p class="price">2.50 лв.</p>
+            </div>
+            <div class="menu-item">
+                <h3>🥖 Пълнозърнест хляб</h3>
+                <p>Здравословен избор с микс от семена.</p>
+                <p class="price">2.20 лв.</p>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin-top: 40px;">Закуски</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>🥐 Домашна баница</h3>
+                <p>Със сирене и масло, по стара рецепта.</p>
+                <p class="price">2.80 лв.</p>
+            </div>
+            <div class="menu-item">
+                <h3>🥨 Кашкавалка</h3>
+                <p>Пухкаво тесто с обилно количество кашкавал.</p>
+                <p class="price">2.00 лв.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Пекарни Желеви Сливен. Всички права запазени.</p>
+    </footer>
+
+</body>
+</html>
