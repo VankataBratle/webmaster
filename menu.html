@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пекарни Желеви | Меню</title>
+    <title>Меню | Пекарни Желеви</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #fdf8f5; color: #4a3b32; }
-        header { background-color: #d4a373; padding: 40px 20px; text-align: center; color: white; }
-        header h1 { margin: 0; font-size: 3em; }
-        nav { text-align: center; padding: 15px; background-color: #faedcd; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        nav a { margin: 0 15px; text-decoration: none; color: #8b5a2b; font-weight: bold; font-size: 1.1em; }
-        nav a:hover { color: #d4a373; }
-        main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+        :root { --primary-color: #d4a373; --secondary-color: #8b5a2b; --dark-color: #2b1e16; --light-color: #faf4ee; --white: #ffffff; --transition: all 0.3s ease; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light-color); color: var(--dark-color); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); padding: 20px 0; text-align: center; z-index: 1000; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
+        nav a { margin: 0 20px; text-decoration: none; color: var(--dark-color); font-weight: 600; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        nav a:hover { color: var(--primary-color); }
+
+        /* Page Header */
+        .page-header {
+            height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(rgba(43, 30, 22, 0.7), rgba(43, 30, 22, 0.7)), url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white); margin-top: 60px;
+        }
+        .page-header h1 { font-size: 3.5em; margin-bottom: 10px; }
         
-        .menu-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;}
-        .menu-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 280px; border-top: 4px solid #d4a373;}
-        .menu-item h3 { color: #8b5a2b; margin-top: 0; }
-        .price { font-weight: bold; color: #4a3b32; font-size: 1.2em; }
+        /* Menu Section */
+        .menu-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .menu-category { text-align: center; font-size: 2.5em; color: var(--secondary-color); margin-bottom: 40px; margin-top: 40px;}
+        .grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
         
-        footer { background-color: #4a3b32; color: #faedcd; text-align: center; padding: 20px; margin-top: 40px; }
+        .menu-card {
+            background: var(--white); padding: 30px; border-radius: 15px; width: 300px; text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: var(--transition); border-top: 4px solid var(--primary-color);
+        }
+        .menu-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .menu-card h3 { color: var(--secondary-color); font-size: 1.5em; margin: 10px 0; }
+        .price { font-size: 1.4em; font-weight: 600; color: var(--primary-color); margin-top: 15px; display: block; }
+
+        footer { background-color: var(--dark-color); color: var(--light-color); text-align: center; padding: 40px 20px; margin-top: 50px;}
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Нашето Меню</h1>
-        <p>Прясно изпечени всеки ден</p>
-    </header>
 
     <nav>
         <a href="index.html">Начало</a>
@@ -35,38 +49,47 @@
         <a href="contact.html">Контакти</a>
     </nav>
 
-    <main>
-        <h2 style="text-align: center;">Традиционен Хляб</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <h3>🍞 Селски хляб с квас</h3>
+    <header class="page-header">
+        <h1>Нашето Меню</h1>
+        <p>Приготвено с майсторство, изпечено до съвършенство.</p>
+    </header>
+
+    <section class="menu-section">
+        <h2 class="menu-category">Традиционен Хляб</h2>
+        <div class="grid">
+            <div class="menu-card">
+                <h3 style="font-size: 2.5em; margin:0;">🍞</h3>
+                <h3>Селски хляб с квас</h3>
                 <p>Бавно ферментирал, с хрупкава кора.</p>
-                <p class="price">2.50 лв.</p>
+                <span class="price">2.50 лв.</span>
             </div>
-            <div class="menu-item">
-                <h3>🥖 Пълнозърнест хляб</h3>
+            <div class="menu-card">
+                <h3 style="font-size: 2.5em; margin:0;">🥖</h3>
+                <h3>Пълнозърнест хляб</h3>
                 <p>Здравословен избор с микс от семена.</p>
-                <p class="price">2.20 лв.</p>
+                <span class="price">2.20 лв.</span>
             </div>
         </div>
 
-        <h2 style="text-align: center; margin-top: 40px;">Закуски</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <h3>🥐 Домашна баница</h3>
+        <h2 class="menu-category">Топли Закуски</h2>
+        <div class="grid">
+            <div class="menu-card">
+                <h3 style="font-size: 2.5em; margin:0;">🥐</h3>
+                <h3>Домашна баница</h3>
                 <p>Със сирене и масло, по стара рецепта.</p>
-                <p class="price">2.80 лв.</p>
+                <span class="price">2.80 лв.</span>
             </div>
-            <div class="menu-item">
-                <h3>🥨 Кашкавалка</h3>
+            <div class="menu-card">
+                <h3 style="font-size: 2.5em; margin:0;">🥨</h3>
+                <h3>Кашкавалка</h3>
                 <p>Пухкаво тесто с обилно количество кашкавал.</p>
-                <p class="price">2.00 лв.</p>
+                <span class="price">2.00 лв.</span>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Пекарни Желеви Сливен. Всички права запазени.</p>
+        <p>&copy; 2026 Пекарни Желеви. Изработено с внимание към детайла.</p>
     </footer>
 
 </body>
