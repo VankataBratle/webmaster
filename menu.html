@@ -21,112 +21,238 @@
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
-        nav a { margin: 0 20px; text-decoration: none; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; transition: 0.3s; }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9em;
+            transition: 0.3s;
+        }
         nav a:hover { color: var(--gold-main); }
 
         .page-header {
-            height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            background: linear-gradient(to bottom, rgba(18,18,18,0.5), var(--bg-dark)), url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background:
+                linear-gradient(to bottom, rgba(18,18,18,0.5), var(--bg-dark)),
+                url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1920&q=80')
+                center/cover;
             margin-top: 60px;
         }
-        .page-header h1 { font-size: 4em; background: linear-gradient(to right, var(--gold-light), var(--gold-main)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        .menu-container { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .category-title { font-size: 2.5em; color: var(--gold-main); text-align: center; margin: 50px 0 30px 0; }
-        
-        .grid { display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; }
-        
+        .page-header h1 {
+            font-size: 4em;
+            background: linear-gradient(to right, var(--gold-light), var(--gold-main));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .menu-container {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-title {
+            font-size: 2.5em;
+            color: var(--gold-main);
+            text-align: center;
+            margin: 50px 0 30px 0;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
         .card-product {
-            background: var(--surface-dark); border-radius: 20px; width: 330px; overflow: hidden;
-            box-shadow: 15px 15px 30px rgba(0,0,0,0.9); border: 1px solid rgba(255,255,255,0.05);
+            background: var(--surface-dark);
+            border-radius: 20px;
+            width: 330px;
+            overflow: hidden;
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.9);
+            border: 1px solid rgba(255,255,255,0.05);
             transition: transform 0.4s ease;
         }
-        .card-product:hover { transform: translateY(-12px); border-color: rgba(212, 175, 55, 0.4); }
-        .card-product img { width: 100%; height: 200px; object-fit: cover; border-bottom: 2px solid var(--gold-dark); }
-        .card-content { padding: 25px; text-align: left; }
-        
-        .price-container { text-align: center; margin-top: 20px; }
-        .price-tag { font-size: 1.4em; font-weight: 700; color: var(--gold-main); display: inline-block; }
 
-        footer { background: var(--surface-dark); padding: 40px; text-align: center; color: var(--text-muted); margin-top: 60px; }
+        .card-product:hover {
+            transform: translateY(-12px);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .card-product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--gold-dark);
+        }
+
+        .card-content {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .price-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .price-tag {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--gold-main);
+            display: inline-block;
+        }
+
+        footer {
+            background: var(--surface-dark);
+            padding: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 60px;
+        }
     </style>
 </head>
+
 <body>
+
     <nav>
         <a href="index.html">Начало</a>
         <a href="menu.html">Меню</a>
         <a href="about.html">За нас</a>
         <a href="contact.html">Контакти</a>
     </nav>
-    
+
     <header class="page-header">
         <h1>Нашето Меню</h1>
     </header>
 
     <div class="menu-container">
+
+        <!-- ТРАДИЦИОНЕН ХЛЯБ -->
         <h2 class="category-title">Традиционен Хляб</h2>
+
         <div class="grid">
+
+            <!-- Селски хляб с квас -->
             <div class="card-product">
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Селски хляб">
+                <img
+                    src="https://image-api.nosalty.hu/nosalty/images/recipes/tn/VS/rusztikus-kovaszos-kenyer.jpeg?fit=crop&s=c6f4562446a113c2367bb18a839d032e&w=3000"
+                    alt="Селски хляб с квас"
+                >
+
                 <div class="card-content">
                     <h3>Селски хляб с квас</h3>
                     <p>Бавно ферментирал хляб с хрупкава кора.</p>
-                    <div class="price-container"><span class="price-tag">€1.28</span></div>
+                    <div class="price-container">
+                        <span class="price-tag">€1.28</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Пълнозърнест хляб -->
             <div class="card-product">
-                <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&q=80" alt="Пълнозърнест хляб">
+                <img
+                    src="https://images.pexels.com/photos/10109372/pexels-photo-10109372.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Пълнозърнест хляб"
+                >
+
                 <div class="card-content">
                     <h3>Пълнозърнест хляб</h3>
                     <p>Здравословен избор с микс от печени семена.</p>
-                    <div class="price-container"><span class="price-tag">€1.12</span></div>
+                    <div class="price-container">
+                        <span class="price-tag">€1.12</span>
+                    </div>
                 </div>
             </div>
+
         </div>
 
+
+        <!-- ТОПЛИ ЗАКУСКИ -->
         <h2 class="category-title">Топли Закуски</h2>
+
         <div class="grid">
-            <!-- 3. Домашна баница (обикновена чиста снимка на печиво) -->
+
+            <!-- Домашна баница -->
             <div class="card-product">
-                <img src="https://images.pexels.com/photos/6287765/pexels-photo-6287765.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Баница">
+                <img
+                    src="https://secessionstyle.com/images/banica.jpg"
+                    alt="Домашна баница"
+                >
+
                 <div class="card-content">
                     <h3>Домашна баница</h3>
                     <p>Традиционна точена баница със сирене и масло.</p>
-                    <div class="price-container"><span class="price-tag">€1.43</span></div>
+                    <div class="price-container">
+                        <span class="price-tag">€1.43</span>
+                    </div>
                 </div>
             </div>
-            <!-- 4. Маслени кроасани (обикновена чиста снимка на кроасан) -->
+
+            <!-- Маслени кроасани -->
             <div class="card-product">
-                <img src="https://images.pexels.com/photos/3865548/pexels-photo-3865548.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Кроасани">
+                <img
+                    src="https://images.pexels.com/photos/6537669/pexels-photo-6537669.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Маслени кроасани"
+                >
+
                 <div class="card-content">
                     <h3>Маслени кроасани</h3>
                     <p>Нежни френски кроасани с истинско масло.</p>
-                    <div class="price-container"><span class="price-tag">€1.02</span></div>
+                    <div class="price-container">
+                        <span class="price-tag">€1.02</span>
+                    </div>
                 </div>
             </div>
-            <!-- 5. Пухкави мекици (обикновена чиста снимка на пържено тестено изделие) -->
+
+            <!-- Пухкави мекици -->
             <div class="card-product">
-                <img src="https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Мекици">
+                <img
+                    src="https://www.bgonair.bg/media/files/resized/article/w1280x720/412/54d45119bebd1ad1b9b1ecf462290412-mekici.jpeg"
+                    alt="Пухкави мекици"
+                >
+
                 <div class="card-content">
                     <h3>Пухкави мекици</h3>
                     <p>Класически мекици по семейна рецепта.</p>
-                    <div class="price-container"><span class="price-tag">€1.23</span></div>
+                    <div class="price-container">
+                        <span class="price-tag">€1.23</span>
+                    </div>
                 </div>
             </div>
-            <!-- 6. Сладки кифли (обикновена чиста снимка на хлебчета/кифлички) -->
+
+            <!-- Сладки кифли с мармалад -->
             <div class="card-product">
-                <img src="https://images.pexels.com/photos/267305/pexels-photo-267305.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Кифли">
+                <img
+                    src="https://media.lasi.lv/media/cache/gallery__jpeg/uploads/media/image/2025092611475668d6533c7afbf.jpg"
+                    alt="Сладки кифли с мармалад"
+                >
+
                 <div class="card-content">
                     <h3>Сладки кифли с мармалад</h3>
                     <p>Меки кифлички, пълни с ароматен мармалад.</p>
-                    <div class="price-container"><span class="price-tag">€0.92</span></div>
+                    <div class="price-container">
+                        <span class="price-tag">€0.92</span>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
     <footer>
         <p>&copy; 2026 Пекарни Желеви. Всички права запазени.</p>
     </footer>
+
 </body>
 </html>
