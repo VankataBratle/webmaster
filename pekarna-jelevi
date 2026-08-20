@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пекарни Желеви - Сливен | Начало</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #fdf8f5; color: #4a3b32; }
+        header { background-color: #d4a373; padding: 40px 20px; text-align: center; color: white; }
+        header h1 { margin: 0; font-size: 3em; }
+        nav { text-align: center; padding: 15px; background-color: #faedcd; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav a { margin: 0 15px; text-decoration: none; color: #8b5a2b; font-weight: bold; font-size: 1.1em; }
+        nav a:hover { color: #d4a373; }
+        main { padding: 50px 20px; text-align: center; max-width: 900px; margin: 0 auto; min-height: 50vh; }
+        .btn { background-color: #d4a373; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .btn:hover { background-color: #8b5a2b; }
+        footer { background-color: #4a3b32; color: #faedcd; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Пекарни Желеви</h1>
+        <p>Вашата любима пекарна в град Сливен</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html">За нас</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+
+    <main>
+        <h2>Добре дошли при нас!</h2>
+        <p>Започнете деня си с уханието на топъл хляб и прясно изпечени закуски. Ние в "Пекарни Желеви" приготвяме всичко на място, всеки ден, използвайки най-добрите съставки и много любов.</p>
+        <p>Посетете един от нашите обекти в град Сливен или разгледайте нашите продукти онлайн.</p>
+        <a href="menu.html" class="btn">Разгледай Менюто</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Пекарни Желеви Сливен. Всички права запазени.</p>
+    </footer>
+
+</body>
+</html>
