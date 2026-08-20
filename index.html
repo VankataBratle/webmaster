@@ -3,157 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пекарни Желеви | Традиция и Вкус</title>
-    
-    <!-- Importing Modern Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Пекарни Желеви | Премиум Качество</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS Variables for a modern, warm color palette */
         :root {
-            --primary-color: #d4a373;
-            --secondary-color: #8b5a2b;
-            --dark-color: #2b1e16;
-            --light-color: #faf4ee;
-            --white: #ffffff;
-            --transition: all 0.3s ease;
+            --bg-dark: #121212;
+            --surface-dark: #1e1e1e;
+            --gold-light: #f5d78d;
+            --gold-main: #d4af37;
+            --gold-dark: #aa8c2c;
+            --text-light: #fdfbf7;
+            --text-muted: #a0a0a0;
         }
 
-        /* Base Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--light-color); color: var(--dark-color); line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        /* Glassmorphism Sticky Navigation */
+        /* Glossy Dark Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 20px 0;
-            text-align: center;
-            z-index: 1000;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            position: fixed; top: 0; width: 100%; padding: 20px 0; text-align: center; z-index: 1000;
+            background: rgba(18, 18, 18, 0.8); backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
         nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 600;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: var(--transition);
+            margin: 0 20px; text-decoration: none; color: var(--text-light); font-weight: 600; 
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; transition: 0.3s;
         }
-        nav a:hover { color: var(--primary-color); }
+        nav a:hover { color: var(--gold-main); text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
 
-        /* Full-Screen Hero Section */
+        /* Hero Section with Parallax Feel */
         .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            /* Using a high-quality Unsplash image of a bakery */
-            background: linear-gradient(rgba(43, 30, 22, 0.7), rgba(43, 30, 22, 0.7)), 
-                        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            color: var(--white);
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(to bottom, rgba(18,18,18,0.3), var(--bg-dark)), 
+                        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
             padding: 0 20px;
         }
-        .hero h1 {
-            font-size: 4.5em;
-            margin-bottom: 10px;
-            animation: fadeInDown 1s ease;
+        
+        /* Metallic Gold Text Effect */
+        .gold-text {
+            font-size: 5em; margin-bottom: 10px;
+            background: linear-gradient(to right, var(--gold-light), var(--gold-main), var(--gold-light));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.8);
         }
-        .hero p {
-            font-size: 1.3em;
-            font-weight: 300;
-            max-width: 600px;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease;
+        .hero p { font-size: 1.2em; color: var(--text-muted); max-width: 600px; margin-bottom: 40px; font-weight: 300; }
+
+        /* 3D Extruded Button */
+        .btn-3d {
+            background: linear-gradient(145deg, var(--gold-main), var(--gold-dark));
+            color: #000; padding: 15px 40px; border-radius: 50px; text-decoration: none;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6), 0 6px 0 #856d22; /* The 3D bottom edge */
+            transition: all 0.15s ease;
+        }
+        .btn-3d:hover {
+            transform: translateY(2px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.6), 0 4px 0 #856d22;
+        }
+        .btn-3d:active {
+            transform: translateY(6px); /* Pushes the button down */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.6), 0 0px 0 #856d22;
         }
 
-        /* Modern Button Styling */
-        .btn {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: var(--transition);
-            box-shadow: 0 10px 20px rgba(212, 163, 115, 0.3);
+        /* 3D Floating Cards */
+        .features { padding: 100px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .features h2 { font-size: 3em; margin-bottom: 60px; color: var(--gold-main); }
+        .grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        
+        .card-3d {
+            background: var(--surface-dark); padding: 40px 30px; border-radius: 20px; width: 320px;
+            /* Heavy shadows for 3D depth and a subtle top-left white glow for a glass edge */
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.9), -2px -2px 10px rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative; overflow: hidden;
         }
-        .btn:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(139, 90, 43, 0.4);
+        .card-3d:hover {
+            /* Lifts up and tilts slightly */
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 20px 25px 40px rgba(0,0,0,0.95), -2px -2px 15px rgba(212,175,55,0.1);
+            border-color: rgba(212, 175, 55, 0.3);
         }
+        .card-3d h3 { font-size: 1.6em; margin: 15px 0; color: var(--gold-light); }
+        .card-3d p { color: var(--text-muted); }
 
-        /* Features/Highlights Section */
-        .features {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .features h2 {
-            font-size: 2.5em;
-            margin-bottom: 50px;
-            color: var(--secondary-color);
-        }
-        .grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        .card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 20px;
-            width: 320px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            border-bottom: 5px solid transparent;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-bottom: 5px solid var(--primary-color);
-        }
-        .card h3 {
-            font-size: 1.5em;
-            margin: 15px 0;
-            color: var(--secondary-color);
-        }
-
-        /* Modern Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: var(--light-color);
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        /* Simple Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        footer { background: var(--surface-dark); border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 20px; text-align: center; color: var(--text-muted); }
     </style>
 </head>
 <body>
 
-    <!-- Sticky Glassmorphism Nav -->
     <nav>
         <a href="index.html">Начало</a>
         <a href="menu.html">Меню</a>
@@ -161,37 +102,35 @@
         <a href="contact.html">Контакти</a>
     </nav>
 
-    <!-- Full Screen Hero Section -->
     <section class="hero">
-        <h1>Пекарни Желеви</h1>
-        <p>Събудете сетивата си с уханието на прясно изпечен хляб и сладки изкушения, приготвени с любов в Сливен.</p>
-        <a href="menu.html" class="btn">Разгледай Менюто</a>
+        <h1 class="gold-text">Пекарни Желеви</h1>
+        <p>Изкуството на традиционния хляб, пренесено в модерната епоха. Събудете сетивата си в Сливен.</p>
+        <a href="menu.html" class="btn-3d">Открий Менюто</a>
     </section>
 
-    <!-- Clean Cards Section -->
     <section class="features">
         <h2>Защо да изберете нас?</h2>
         <div class="grid">
-            <div class="card">
-                <h3 style="font-size: 2.5em; margin: 0;">🌾</h3>
+            <div class="card-3d">
+                <h3 style="font-size: 3em; margin: 0;">🌾</h3>
                 <h3>Естествен Квас</h3>
-                <p>Бавна ферментация за по-добър вкус и лесно храносмилане. Истинският хляб изисква време.</p>
+                <p>Бавна ферментация за изключителен вкус. Истинският хляб изисква време и търпение.</p>
             </div>
-            <div class="card">
-                <h3 style="font-size: 2.5em; margin: 0;">🥐</h3>
+            <div class="card-3d">
+                <h3 style="font-size: 3em; margin: 0;">🥐</h3>
                 <h3>Прясно Всеки Ден</h3>
-                <p>Нашите фурни работят от ранни зори, за да ви предложим топли закуски за идеалното утро.</p>
+                <p>Нашите фурни работят от ранни зори, за да ви предложим съвършенство във всяка хапка.</p>
             </div>
-            <div class="card">
-                <h3 style="font-size: 2.5em; margin: 0;">❤️</h3>
-                <h3>Местно Производство</h3>
-                <p>Гордеем се, че сме част от общността на град Сливен и подкрепяме местните производители.</p>
+            <div class="card-3d">
+                <h3 style="font-size: 3em; margin: 0;">👑</h3>
+                <h3>Премиум Качество</h3>
+                <p>Селектирани брашна и съставки от най-висок клас за клиенти с безкомпромисен вкус.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Пекарни Желеви. Изработено с внимание към детайла.</p>
+        <p>&copy; 2026 Пекарни Желеви. Всички права запазени.</p>
     </footer>
 
 </body>
