@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пекарни Желеви | Контакти</title>
+    <title>Контакти | Пекарни Желеви</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #fdf8f5; color: #4a3b32; }
-        header { background-color: #d4a373; padding: 40px 20px; text-align: center; color: white; }
-        header h1 { margin: 0; font-size: 3em; }
-        nav { text-align: center; padding: 15px; background-color: #faedcd; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        nav a { margin: 0 15px; text-decoration: none; color: #8b5a2b; font-weight: bold; font-size: 1.1em; }
-        nav a:hover { color: #d4a373; }
-        main { padding: 50px 20px; text-align: center; max-width: 1000px; margin: 0 auto; }
+        :root { --primary-color: #d4a373; --secondary-color: #8b5a2b; --dark-color: #2b1e16; --light-color: #faf4ee; --white: #ffffff; --transition: all 0.3s ease; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light-color); color: var(--dark-color); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); padding: 20px 0; text-align: center; z-index: 1000; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
+        nav a { margin: 0 20px; text-decoration: none; color: var(--dark-color); font-weight: 600; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        nav a:hover { color: var(--primary-color); }
+
+        .page-header {
+            height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(rgba(43, 30, 22, 0.7), rgba(43, 30, 22, 0.7)), url('https://images.unsplash.com/photo-1555507036-ab1e4006aaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white); margin-top: 60px;
+        }
+        .page-header h1 { font-size: 3.5em; margin-bottom: 10px; }
+
+        .locations { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .location-card {
+            background-color: var(--dark-color); color: var(--light-color); padding: 30px; border-radius: 15px; 
+            width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: var(--transition);
+        }
+        .location-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        .location-card h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.4em; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;}
         
-        .locations { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
-        .location-card { background-color: #634f43; color: #faedcd; padding: 20px; border-radius: 8px; width: 260px; text-align: left; }
-        .location-card h3 { margin-top: 0; color: white; border-bottom: 1px solid #8b5a2b; padding-bottom: 10px;}
-        
-        .contact-info { margin-top: 40px; font-size: 1.2em; background: white; padding: 20px; border-radius: 8px; display: inline-block;}
-        footer { background-color: #4a3b32; color: #faedcd; text-align: center; padding: 20px; margin-top: 40px; }
+        .contact-info { text-align: center; margin-bottom: 60px; }
+        .contact-info p { font-size: 1.2em; }
+        .phone { color: var(--secondary-color); font-weight: bold; font-size: 1.5em; display: block; margin-top: 10px;}
+
+        footer { background-color: var(--dark-color); color: var(--light-color); text-align: center; padding: 40px 20px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Свържете се с нас</h1>
-        <p>Намерете най-близката пекарна до вас</p>
-    </header>
 
     <nav>
         <a href="index.html">Начало</a>
@@ -35,37 +46,38 @@
         <a href="contact.html">Контакти</a>
     </nav>
 
-    <main>
-        <h2>Нашите обекти в град Сливен</h2>
+    <header class="page-header">
+        <h1>Свържете се с нас</h1>
+        <p>Намерете най-близката пекарна в град Сливен.</p>
+    </header>
+
+    <section class="locations">
+        <div class="location-card">
+            <h3>📍 Обект 1 - Център</h3>
+            <p>бул. "Цар Освободител" №15</p>
+            <p>🕒 Пон-Нед: 06:30 - 19:30 ч.</p>
+        </div>
         
-        <div class="locations">
-            <div class="location-card">
-                <h3>📍 Обект 1 - Център</h3>
-                <p>бул. "Цар Освободител" №15</p>
-                <p>🕒 Пон-Нед: 06:30 - 19:30 ч.</p>
-            </div>
-            
-            <div class="location-card">
-                <h3>📍 Обект 2 - кв. Българка</h3>
-                <p>ул. "Панайот Хитов" №82</p>
-                <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
-            </div>
-
-            <div class="location-card">
-                <h3>📍 Обект 3 - Сини камъни</h3>
-                <p>до кооперативния пазар</p>
-                <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
-            </div>
+        <div class="location-card">
+            <h3>📍 Обект 2 - кв. Българка</h3>
+            <p>ул. "Панайот Хитов" №82</p>
+            <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
         </div>
 
-        <div class="contact-info">
-            <p>📞 <strong>Телефон за поръчки на питки и торти:</strong> 0888 123 456</p>
-            <p>✉️ <strong>Имейл:</strong> office@jelevi-bakery.bg</p>
+        <div class="location-card">
+            <h3>📍 Обект 3 - Сини камъни</h3>
+            <p>до кооперативния пазар</p>
+            <p>🕒 Пон-Съб: 07:00 - 19:00 ч.</p>
         </div>
-    </main>
+    </section>
+
+    <div class="contact-info">
+        <p>Имате специален повод? Поръчайте празнична питка или торта.</p>
+        <span class="phone">📞 0888 123 456</span>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Пекарни Желеви Сливен. Всички права запазени.</p>
+        <p>&copy; 2026 Пекарни Желеви. Изработено с внимание към детайла.</p>
     </footer>
 
 </body>
